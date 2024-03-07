@@ -1,0 +1,272 @@
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  a:focus {
+    outline-offset: 2px; /* (doesn`t exist in layout) */
+  }
+  /* and 16-19px padding also looks better */
+  /* .logo,
+  .navigation-link {
+    padding: 24px 0;
+  } */
+
+  .page-header .container,
+  .navigation-menu,
+  .contacts {
+    display: flex;
+  }
+  .mobile-only-burger-btn {
+    display: none;
+  }
+
+  .logo {
+    margin-right: 120px;
+  }
+
+  .contacts {
+    display: block;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+  }
+  .link-top {
+    display: block;
+    padding-top: 16px;
+    padding-bottom: 6px;
+  }
+  .link-bottom {
+    display: block;
+    padding-top: 6px;
+    padding-bottom: 16px;
+  }
+
+  .section-hero-bg {
+    background-image: url(../images/bg-hero_t.jpg);
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .section-hero-bg {
+      background-image: url(../images/bg-hero_t@2.jpg);
+    }
+  }
+
+  .section-hero {
+    padding: 112px 0;
+  }
+
+  .section-hero-title {
+    max-width: 496px;
+    margin-bottom: 36px;
+    font-size: 56px;
+  }
+
+  .section-selfpromo-ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+    justify-content: space-between;
+  }
+
+  .section-selfpromo-item {
+    width: calc(46%); /* 356/768=46% */
+  }
+
+  .section-team .container {
+    padding: 0 14%; /* 108/768=14% */
+  }
+
+  .section-team-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 64px 24px;
+    justify-content: space-evenly; /* fits best */
+  }
+
+  .section-portfolio .container {
+    /* padding: 0 14%; 108/768=14% */
+  }
+
+  .section-portfolio-set {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    justify-content: space-evenly; /* fits best */
+    column-gap: 24px;
+  }
+
+  .portfolio-card {
+    width: calc((100% - 24px) / 2);
+    max-width: 356px;
+  }
+
+  .portfolio-card:hover {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+      0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  }
+
+  .page-footer .container {
+    display: block;
+    padding: 0 21% 0 14%; /* 21% = 164px on screen 768  */
+  }
+
+  .footer-info-n-social-wrapper {
+    justify-content: space-between;
+    margin-bottom: 72px;
+  }
+
+  .footer-text {
+    margin-right: 24px;
+  }
+
+  .footer-form {
+    flex-direction: row;
+    gap: 5%; /* 24px between input-264 and button-165 */
+    justify-content: space-between;
+    padding-right: 43px; /* to align button with above social */
+  }
+  .footer-form-input-in-label {
+    width: calc(
+      100% - 189px
+    ); /* input-width (without button and space between) */
+  }
+  .footer-input {
+    width: 100%;
+  }
+}
+
+/* ============================= */
+/* ============= pc ============ */
+@media screen and (min-width: 1158px) {
+  .section {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 120px 0;
+  }
+
+  .container {
+    max-width: 1160px;
+    padding: 0 16px;
+  }
+
+  .section-hero-bg {
+    background-image: url(../images/bg-hero_p.jpg);
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .section-hero-bg {
+      background-image: url(../images/bg-hero_p@2.jpg);
+    }
+  }
+
+  .section-hero {
+    padding: 188px 0;
+  }
+
+  .section-hero-title {
+    max-width: 496px;
+    margin-bottom: 48px;
+    font-size: 56px;
+  }
+
+  .section-selfpromo-ul {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .section-selfpromo-item {
+    width: 264px; /* seems best to set card width (stretches it weird) */
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    margin-bottom: 8px;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    background-color: #f4f4fd;
+  }
+
+  .icon-selfpromo {
+    margin: auto;
+  }
+
+  .section-subtitle {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .paragraf-basic {
+    font-weight: 400;
+  }
+
+  .section-team-list {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .section-team-card {
+    width: calc((100% - 72px) / 4);
+  }
+
+  .section-portfolio {
+    padding: 120px 0 120px 0;
+  }
+
+  .section-portfolio-set {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+  }
+
+  .portfolio-card {
+    max-width: calc((100% - 48px) / 3);
+  }
+
+  .page-footer {
+    padding: 100px 0;
+  }
+
+  .page-footer .container {
+    align-items: baseline;
+  }
+
+  .container-footer-info {
+    margin-right: 120px;
+  }
+
+  .container-footer-social {
+    margin-right: 80px;
+  }
+
+  .footer-form {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .footer-input {
+    width: 264px;
+    opacity: 1;
+  }
+
+  /* ==== Header styles ==== */
+  .page-header .container {
+    height: 72px;
+  }
+  .page-header .container,
+  .navigation-menu,
+  .contacts {
+    display: flex;
+  }
+  .mobile-only-burger-btn {
+    display: none;
+  }
+
+  .contacts {
+    display: flex;
+    gap: 40px;
+  }
+  /* ==== /Header styles ==== */
+}

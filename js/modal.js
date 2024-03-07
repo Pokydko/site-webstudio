@@ -27,8 +27,8 @@
 
 // burger-menu
   const menu = {
-    openModalBtn: document.querySelectorAll("[menu-open]"),
-    closeModalBtn: document.querySelector("[menu-close]"),
+    openModalBtn: document.querySelectorAll("[menu-modal-open]"),
+    closeModalBtn: document.querySelector("[menu-modal-close]"),
     modal: document.querySelector("[menu-modal]"),
   };
   menu.openModalBtn.forEach((element) => {

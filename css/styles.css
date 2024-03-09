@@ -29,7 +29,7 @@ a:focus {
   /* (doesn`t exist in layout) but looks cool (specialy social-links) */
   border-radius: 15px;
   outline: 1px solid #404bbf;
-  outline-offset: 6px; /* distancing from text, but without adding paddings */
+  outline-offset: 2px; /* distancing from text, but without adding paddings */
 }
 
 h1,
@@ -117,34 +117,29 @@ label {
 }
 
 .container {
+  max-width: 320px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 5%; /* 16px/320=5% */
+  padding: 0 16px;
 }
 /* ==== /General styles ==== */
 
 /* ==== Header styles ==== */
 /* burger-menu styles */
-/* .burger-menu .close-btn {
-  fill: #e7e9fc;
-} */
 .mobile-burger-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
   padding: 52px 24px 40px 16px;
   background-color: #ffffff;
 }
 
-.burger-menu {
-  display: block;
-  margin-bottom: auto;
-}
 .burger-menu-link {
   display: block;
   padding: 20px 0;
@@ -180,14 +175,13 @@ label {
 }
 
 .page-header .container {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 16px;
 }
 
-.logo,
-.navigation-link {
-  padding: 16px 0; /* in pc/tablet it`s 24, but for outline-offset - I`ll prefer to stay on 16 */
+.logo {
+  padding: 16px 0;
 }
 
 .navigation {
@@ -591,18 +585,18 @@ label {
   width: 288px;
   height: 40px;
   padding: 8px 16px;
-  border: 1px solid #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   color: #ffffff;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
-  opacity: 0.3;
 }
 
-.footer-subscribe-form input::placeholder {
+.footer-input::placeholder {
   color: #ffffff;
+  opacity: 0.6;
 }
 
 .btn-subscribe {
@@ -644,6 +638,7 @@ label {
   position: absolute;
   top: 50%;
   left: 50%;
+  overflow-y: auto;
   max-width: 408px;
   max-height: 584px;
   padding: 72px 24px 24px 24px;

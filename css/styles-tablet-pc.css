@@ -1,14 +1,13 @@
 @media screen and (min-width: 768px) and (max-width: 1157px) {
-  a:focus {
-    outline-offset: 2px; /* (doesn`t exist in layout) */
+  .container {
+    max-width: 768px;
   }
-  /* and 16-19px padding also looks better */
-  /* .logo,
+
+  .logo,
   .navigation-link {
     padding: 24px 0;
-  } */
+  }
 
-  .page-header .container,
   .navigation-menu,
   .contacts {
     display: flex;
@@ -22,20 +21,12 @@
   }
 
   .contacts {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-  }
-  .link-top {
-    display: block;
-    padding-top: 16px;
-    padding-bottom: 6px;
-  }
-  .link-bottom {
-    display: block;
-    padding-top: 6px;
-    padding-bottom: 16px;
   }
 
   .section-hero-bg {
@@ -63,26 +54,21 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 72px 24px;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .section-selfpromo-item {
-    width: calc(46%); /* 356/768=46% */
+    width: calc((100% - 24px) / 2);
   }
 
   .section-team .container {
-    padding: 0 14%; /* 108/768=14% */
+    max-width: 584px;
   }
 
   .section-team-list {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 64px 24px;
-    justify-content: space-evenly; /* fits best */
-  }
-
-  .section-portfolio .container {
-    /* padding: 0 14%; 108/768=14% */
   }
 
   .section-portfolio-set {
@@ -105,28 +91,24 @@
 
   .page-footer .container {
     display: block;
-    padding: 0 21% 0 14%; /* 21% = 164px on screen 768  */
+    max-width: 584px;
   }
 
   .footer-info-n-social-wrapper {
-    justify-content: space-between;
     margin-bottom: 72px;
   }
 
   .footer-text {
+    max-width: 264px;
     margin-right: 24px;
   }
 
   .footer-form {
     flex-direction: row;
-    gap: 5%; /* 24px between input-264 and button-165 */
-    justify-content: space-between;
-    padding-right: 43px; /* to align button with above social */
+    gap: 24px;
   }
   .footer-form-input-in-label {
-    width: calc(
-      100% - 189px
-    ); /* input-width (without button and space between) */
+    width: 264px;
   }
   .footer-input {
     width: 100%;
@@ -136,6 +118,12 @@
 /* ============================= */
 /* ============= pc ============ */
 @media screen and (min-width: 1158px) {
+  .logo,
+  .navigation-link,
+  .contacts-link {
+    padding: 24px 0;
+  }
+
   .section {
     max-width: 1440px;
     margin: 0 auto;
@@ -143,8 +131,8 @@
   }
 
   .container {
-    max-width: 1160px;
-    padding: 0 16px;
+    max-width: 1158px;
+    padding: 0 15px;
   }
 
   .section-hero-bg {
@@ -186,10 +174,6 @@
     border: 1px solid #8e8f99;
     border-radius: 4px;
     background-color: #f4f4fd;
-  }
-
-  .icon-selfpromo {
-    margin: auto;
   }
 
   .section-subtitle {
@@ -252,9 +236,6 @@
   }
 
   /* ==== Header styles ==== */
-  .page-header .container {
-    height: 72px;
-  }
   .page-header .container,
   .navigation-menu,
   .contacts {

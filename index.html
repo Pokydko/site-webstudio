@@ -15,76 +15,15 @@
   <!-- styles with normalization -->
   <link href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css" rel="stylesheet">
   <link href="./css/styles.css" rel="stylesheet">
-  <!-- some hack. does it make any sense? https://stackoverflow.com/questions/68945768/how-can-i-link-a-stylesheet-with-a-media-query-such-that-it-is-downloaded-only-w -->
-  <link href="./css/styles-tablet-pc.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <!-- some hack (to delay-download styles) https://stackoverflow.com/questions/68945768/how-can-i-link-a-stylesheet-with-a-media-query-such-that-it-is-downloaded-only-w -->
+  <link href="./css/styles-tablet-pc.css" rel="stylesheet" media="print" onload="this.media='screen'">
 </head>
 
 <body>
   <header class="page-header">
-    <div class="backdrop is-hidden" menu-modal>
-      <div class="mobile-burger-menu">
-        <button class="close-btn" type="button" menu-modal-close><svg class="icon-selfpromo"
-            aria-label="close ordering page" height="8" width="8">
-            <use href="./images/icons.svg#icon-close"></use>
-          </svg></button>
-        <ul class="burger-menu">
-          <li class="burger-menu-item">
-            <a class="burger-menu-link marked" href="./index.html">Studio</a>
-          </li>
-          <li>
-            <a class="burger-menu-link" href="#portfolio">Portfolio</a>
-          </li>
-          <li><a class="burger-menu-link" href="#">Contacts</a></li>
-        </ul>
-        <div class="bottom-wrap">
-          <ul class="burger-menu-contacts">
-            <li>
-              <a class="burger-menu-contacts-link marked" href="mailto:info@devstudio.com">info@devstudio.com</a>
-            </li>
-            <li>
-              <a class="burger-menu-contacts-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
-            </li>
-          </ul>
-          <ul class="bigsymbol-social-links-list">
-            <li class="bigsymbol-social-links-item">
-              <a class="bigsymbol-social-links-link" href="http://instagram.com/webstudio" target="_blank"><svg
-                  class="bigsymbol-icon-social" height="24" width="24">
-                  <use href="./images/icons.svg#icon-insta"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="bigsymbol-social-links-item">
-              <a class="bigsymbol-social-links-link" href="http://twitter.com/webstudio" target="_blank"><svg
-                  class="bigsymbol-icon-social" height="24" width="24">
-                  <use href="./images/icons.svg#icon-twit"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="bigsymbol-social-links-item">
-              <a class="bigsymbol-social-links-link" href="http://facebook.com/webstudio" target="_blank"><svg
-                  class="bigsymbol-icon-social" height="24" width="24">
-                  <use href="./images/icons.svg#icon-fb"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="bigsymbol-social-links-item">
-              <a class="bigsymbol-social-links-link" href="http://linkedin.com/webstudio" target="_blank"><svg
-                  class="bigsymbol-icon-social" height="24" width="24">
-                  <use href="./images/icons.svg#icon-linki"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
     <div class="container">
       <nav class="navigation">
-        <a class="logo" href="./index.html">Web<span class="logo-header">Studio</span></a>
-        <button class="mobile-only-burger-btn" type="button" aria-label="open navigation menu" menu-modal-open><svg
-            class="icon-class-solid_menu" width="24" height="24">
-            <use href="./images/icons.svg#icon-solid_menu"></use>
-          </svg></button>
+        <a class="logo" href="#">Web<span class="logo-header">Studio</span></a>
         <ul class="navigation-menu">
           <li class="navigation-item">
             <a class="navigation-link active" href="./index.html">Studio</a>
@@ -109,7 +48,7 @@
   </header>
   <main>
     <!-- hero-bg-image and ordering-button -->
-    <section class="section-hero-bg">
+    <section class="section-hero-bg" id="ordering">
       <div class="section-hero">
         <div class="container">
           <h1 class="section-hero-title">
@@ -121,7 +60,7 @@
       </div>
     </section>
     <!-- company self-promo -->
-    <section class="section">
+    <section class="section" id="our_values">
       <div class="container">
         <h2 class="section-title visually-hidden">Company values</h2>
         <ul class="section-selfpromo-ul">
@@ -527,6 +466,7 @@
       </div>
     </div>
   </footer>
+
   <!-- order-form window (js ruled, no-scroll)-->
   <div class="backdrop is-hidden" data-modal>
     <div class="order-modal-window">
@@ -579,6 +519,73 @@
         </div>
         <button class="button order-form-btn" type="submit">Send</button>
       </form>
+    </div>
+  </div>
+
+  <!-- burger-icon -->
+  <div id="burger-icon-container" data-menu-anima-open data-menu-modal-open>
+    <div id="burger-icon" data-menu-anima aria-label="navigation menu (open or close)">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- burger-menu -->
+  <div class="backdrop is-hidden" data-menu-modal>
+    <div class="mobile-burger-menu">
+      <ul class="burger-menu" data-menu-anima-close data-menu-modal-close>
+        <li class="burger-menu-item">
+          <a class="burger-menu-link marked" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="burger-menu-item">
+          <a class="burger-menu-link" href="#our_values">Our values</a>
+        </li>
+        <li><a class="burger-menu-link" href="#ordering">Order solution</a></li>
+      </ul>
+      <div class="bottom-wrap">
+        <ul class="burger-menu-contacts">
+          <li>
+            <a class="burger-menu-contacts-link marked" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+          <li>
+            <a class="burger-menu-contacts-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+          </li>
+        </ul>
+        <ul class="bigsymbol-social-links-list">
+          <li class="bigsymbol-social-links-item">
+            <a class="bigsymbol-social-links-link" href="http://instagram.com/webstudio" target="_blank"><svg
+                class="bigsymbol-icon-social" height="24" width="24">
+                <use href="./images/icons.svg#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="bigsymbol-social-links-item">
+            <a class="bigsymbol-social-links-link" href="http://twitter.com/webstudio" target="_blank"><svg
+                class="bigsymbol-icon-social" height="24" width="24">
+                <use href="./images/icons.svg#icon-twit"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="bigsymbol-social-links-item">
+            <a class="bigsymbol-social-links-link" href="http://facebook.com/webstudio" target="_blank"><svg
+                class="bigsymbol-icon-social" height="24" width="24">
+                <use href="./images/icons.svg#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="bigsymbol-social-links-item">
+            <a class="bigsymbol-social-links-link" href="http://linkedin.com/webstudio" target="_blank"><svg
+                class="bigsymbol-icon-social" height="24" width="24">
+                <use href="./images/icons.svg#icon-linki"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
   <script src="./js/modal.js"></script>

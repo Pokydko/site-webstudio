@@ -1,4 +1,20 @@
 @media screen and (min-width: 768px) and (max-width: 1157px) {
+  /* burger-icon tablet-styles */
+  #burger-icon-container {
+    top: 72px;
+    margin-top: 5px;
+    padding: 10px;
+  }
+  #burger-icon.open {
+    margin: 0;
+    border: transparent;
+    background-color: transparent;
+  }
+  #burger-icon.open span {
+    background-color: transparent;
+  }
+  /* /burger-icon-close jumpes up styles */
+
   a:focus {
     outline-offset: 2px; /* (doesn`t exist in layout) */
   }
@@ -136,6 +152,19 @@
 /* ============================= */
 /* ============= pc ============ */
 @media screen and (min-width: 1158px) {
+  #burger-icon-container {
+    display: none;
+  }
+  /* @media screen and (min-width: 1440px) {
+    #burger-icon-container {
+      right: 40px;
+      margin-right: calc((100% - 1440px) / 2);
+    }
+  } */
+  .page-header .container {
+    padding: 0 16px;
+  }
+
   .section {
     max-width: 1440px;
     margin: 0 auto;
